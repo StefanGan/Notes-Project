@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
   rightContainer: {
     flex: 1,
     // backgroundColor: 'blue',
+    //testing
   },
   leftArrow: {
     height: 24,
