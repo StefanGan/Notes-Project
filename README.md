@@ -1,5 +1,3 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
-
 # Getting Started
 
 > **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
@@ -51,3 +49,5 @@ This is one way to run your app — you can also run it directly from within And
 Now that you have successfully run the app, let's having fun on it.
 
 ### Thank You
+
+#### From Stefan
