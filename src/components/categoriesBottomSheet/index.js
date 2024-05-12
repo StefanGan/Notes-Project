@@ -1,14 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
-import React, {useState} from 'react';
-import {
-  Image,
-  Text,
-  View,
-  TouchableOpacity,
-  TextInput,
-  ScrollView,
-  FlatList,
-} from 'react-native';
+import React from 'react';
+import {Text, View, TouchableOpacity, ScrollView} from 'react-native';
 import RBSheet from 'react-native-raw-bottom-sheet';
 
 //styles
@@ -17,6 +9,7 @@ const CategoriesBottomSheet = ({
   refRBSheet,
   selectedData,
   setSelectedData,
+  setStoreKey,
   data = [],
 }) => {
   const navigation = useNavigation();
@@ -59,6 +52,7 @@ const CategoriesBottomSheet = ({
                 ]}
                 onPress={() => {
                   setSelectedData(val.contain);
+                  setStoreKey(val.storeKey);
                   refRBSheet.current.close();
                 }}>
                 <Text style={styles.buttonText}>{val.contain}</Text>

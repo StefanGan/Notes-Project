@@ -1,6 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
-import React, {useState} from 'react';
-import {Image, Text, View, TouchableOpacity, Modal} from 'react-native';
+import React from 'react';
+import {Text, View, Modal} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 //images

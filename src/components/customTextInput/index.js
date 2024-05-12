@@ -1,12 +1,10 @@
 import {useNavigation} from '@react-navigation/native';
-import React, {useState} from 'react';
-import {Image, Text, View, TouchableOpacity, TextInput} from 'react-native';
+import React from 'react';
+import {View, TextInput} from 'react-native';
 
-//images
-import {LeftArrowWhite} from '../../assets';
 //styles
 import styles from './style';
-const CustomTextInput = ({maxInput = 0}) => {
+const CustomTextInput = ({maxInput = 0, setContent, content}) => {
   const navigation = useNavigation();
   return (
     <View style={styles.mainContainer}>
@@ -15,6 +13,10 @@ const CustomTextInput = ({maxInput = 0}) => {
         placeholder="Please input note content"
         placeholderTextColor={'#FFFFFF'}
         style={styles.textInputStyle}
+        value={content}
+        onChangeText={value => {
+          setContent(value);
+        }}
       />
     </View>
   );

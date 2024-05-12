@@ -1,6 +1,5 @@
 // SettingPage.js
 import React, {useState} from 'react';
-import {View, Button} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {
   BookIcon,
@@ -11,18 +10,21 @@ import {
 import Footer from '../../components/footer';
 import Header from '../../components/header';
 import PopOut from '../../components/popout';
-import SettingButton from '../../components/settingButton';
+import GreyButton from '../../components/greyButton';
+import {clearStorage} from '../../storage';
 
 const SettingPage = () => {
   const [modalVisible, setModalVisible] = useState(false);
-  const handleDeleteAllNotes = () => {
+  const handleDeleteAllNotes = async () => {
     // Logic to delete all notes
+    let temp = await clearStorage();
     // Update Home and Summary pages
-    setModalVisible(true);
-    setInterval(() => {
-      setModalVisible(false);
-    }, 2000);
-    console.log('testing delete all', modalVisible);
+    if (temp) {
+      setModalVisible(true);
+      setInterval(() => {
+        setModalVisible(false);
+      }, 2000);
+    }
   };
 
   return (
@@ -34,10 +36,10 @@ const SettingPage = () => {
         modalVisible={modalVisible}
         title={'All notes have been cleared'}
       />
-      <SettingButton title={'Online Customer'} icon={CustomerServiceIcon} />
-      <SettingButton title={'User Agreement'} icon={NoteIcon} />
-      <SettingButton title={'Privacy Policy'} icon={BookIcon} />
-      <SettingButton title={'About Us'} icon={EnquiryIcon} />
+      <GreyButton title={'Online Customer'} icon={CustomerServiceIcon} />
+      <GreyButton title={'User Agreement'} icon={NoteIcon} />
+      <GreyButton title={'Privacy Policy'} icon={BookIcon} />
+      <GreyButton title={'About Us'} icon={EnquiryIcon} />
       <Footer title={'Delete All Notes'} onPress={handleDeleteAllNotes} />
     </LinearGradient>
   );

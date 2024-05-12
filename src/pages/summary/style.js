@@ -1,5 +1,4 @@
 import {StyleSheet} from 'react-native';
-import {Colors} from '../../global/colors';
 
 const styles = StyleSheet.create({
   mainContainer: {flex: 1, backgroundColor: '#280947'},

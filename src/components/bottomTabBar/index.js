@@ -1,13 +1,6 @@
 import React, {memo} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {
-  Dimensions,
-  Image,
-  Platform,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Image, Platform, Text, TouchableOpacity, View} from 'react-native';
 import HomePage from '../../pages/home';
 import NewNotePage from '../../pages/newNote';
 import SummaryPage from '../../pages/summary';
@@ -23,13 +16,7 @@ const Tab = createBottomTabNavigator();
 
 const BottomTabBar = () => {
   return (
-    <Tab.Navigator
-      screenOptions={({route}) => ({
-        tabBarStyle: {
-          display: route.name === 'AddNew' ? 'none' : 'flex',
-        },
-      })}
-      tabBar={props => <CustomBottomBar {...props} />}>
+    <Tab.Navigator tabBar={props => <CustomBottomBar {...props} />}>
       <Tab.Screen
         name="Home"
         component={HomePage}

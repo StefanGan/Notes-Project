@@ -1,6 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
-import React, {useState} from 'react';
-import {Image, Text, View, TouchableOpacity} from 'react-native';
+import React from 'react';
+import {Image, Text, View} from 'react-native';
 
 //images
 import {LeftArrowWhite, SummaryHeaderLogo} from '../../assets';

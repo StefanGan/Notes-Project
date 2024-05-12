@@ -1,12 +1,12 @@
 import {useNavigation} from '@react-navigation/native';
-import React, {useState} from 'react';
-import {Image, Text, View, TouchableOpacity, TextInput} from 'react-native';
+import React from 'react';
+import {Image, Text, View, TouchableOpacity} from 'react-native';
 
 //images
 import {RightArrowPink} from '../../assets';
 //styles
 import styles from './style';
-const SettingButton = ({onPress, title, icon}) => {
+const GreyButton = ({onPress, title, icon}) => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity style={styles.mainContainer} onPress={onPress}>
@@ -30,4 +30,4 @@ const SettingButton = ({onPress, title, icon}) => {
   );
 };
 
-export default SettingButton;
+export default GreyButton;

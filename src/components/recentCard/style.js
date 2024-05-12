@@ -16,14 +16,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   bottomContainer: {
+    flex: 1,
+  },
+  bottomContainerInside: {
     backgroundColor: 'rgba(255, 255, 255, 0.05)',
     borderRadius: 20,
     borderWidth: 1,
     borderColor: 'rgba(255, 255, 255, 0.12)',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     paddingVertical: 20,
     paddingHorizontal: 10,
+    marginTop: 10,
+    flexDirection: 'row',
   },
+
   topLeftContainer: {
     flex: 1,
     flexDirection: 'row',
