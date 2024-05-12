@@ -7,6 +7,7 @@ import HomePage from '../pages/home';
 import NewNotePage from '../pages/newNote';
 import SettingPage from '../pages/setting';
 import SummaryPage from '../pages/summary';
+import LandingPage from '../pages/landing';
 
 const Route = () => {
   const Stack = createNativeStackNavigator();
@@ -20,9 +21,10 @@ const Route = () => {
             backgroundColor: 'transparent',
           },
         }}>
+        <Stack.Screen name="Landing" component={LandingPage} />
         <Stack.Screen name="HomePage" component={HomePage} />
-        <Stack.Screen name="NewNotePage" component={NewNotePage} />
         <Stack.Screen name="SettingPage" component={SettingPage} />
+        <Stack.Screen name="NewNotePage" component={NewNotePage} />
         <Stack.Screen name="SummaryPage" component={SummaryPage} />
       </Stack.Navigator>
     </NavigationContainer>

@@ -4,16 +4,13 @@ import {Colors} from '../../global/colors';
 const styles = StyleSheet.create({
   mainContainer: {
     // flex: 1,
-    height: '15%',
+    height: '25%',
     backgroundColor: '#280947',
     flexDirection: 'row',
-    paddingTop: 40,
-    paddingHorizontal: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: 'space-between',
     marginBottom: 10,
-    borderBottomLeftRadius: 15,
-    borderBottomRightRadius: 15,
+    paddingTop: 70,
+    paddingLeft: 20,
   },
   leftContainer: {
     flex: 1,
@@ -37,6 +34,13 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 24,
     fontWeight: '600',
+  },
+  backgroundImage: {
+    width: 250,
+    height: 250,
+    position: 'absolute',
+    top: 0,
+    right: 0,
   },
 });
 

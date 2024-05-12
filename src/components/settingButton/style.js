@@ -16,6 +16,13 @@ const styles = StyleSheet.create({
   },
   textTitle: {
     color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: '400',
+  },
+  titleContainer: {
+    flexDirection: 'row',
+    height: 20,
+    gap: 10,
   },
 });
 

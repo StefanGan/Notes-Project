@@ -4,38 +4,36 @@ import {Colors} from '../../global/colors';
 const styles = StyleSheet.create({
   mainContainer: {
     // flex: 1,
-    height: '15%',
+    height: '10%',
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
     backgroundColor: '#280947',
     flexDirection: 'row',
-    paddingTop: 40,
     paddingHorizontal: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 10,
-    borderBottomLeftRadius: 15,
-    borderBottomRightRadius: 15,
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
   },
-  leftContainer: {
-    flex: 1,
-    // backgroundColor: 'red',
-  },
+
   midContainer: {
-    flex: 5,
-    alignItems: 'flex-start',
-    // backgroundColor: 'green',
-  },
-  rightContainer: {
     flex: 1,
-    alignItems: 'flex-end',
-    // backgroundColor: 'blue',
+    alignItems: 'center',
   },
-  leftArrow: {
-    height: 24,
-    width: 24,
+
+  midbackground: {
+    width: 'auto',
+    paddingHorizontal: 50,
+    alignItems: 'center',
+    borderRadius: 20,
+    paddingVertical: 5,
   },
+
   midTitle: {
     color: 'white',
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: '600',
   },
 });

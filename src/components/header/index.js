@@ -1,3 +1,4 @@
+import {useNavigation} from '@react-navigation/native';
 import React, {useState} from 'react';
 import {Image, Text, View, TouchableOpacity} from 'react-native';
 
@@ -5,24 +6,39 @@ import {Image, Text, View, TouchableOpacity} from 'react-native';
 import {LeftArrowWhite} from '../../assets';
 //styles
 import styles from './style';
-const Header = ({hasBack = false, hasRightIcon = ''}) => {
+const Header = ({hasBack = false, hasRightIcon = '', title, onPress}) => {
+  const navigation = useNavigation();
   return (
     <View style={styles.mainContainer}>
-      <View style={styles.leftContainer}>
-        <Image
-          source={LeftArrowWhite}
-          resizeMode="contain"
-          style={styles.leftArrow}
-        />
-      </View>
+      {hasBack && (
+        <View style={styles.leftContainer}>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.goBack();
+            }}>
+            <Image
+              source={LeftArrowWhite}
+              resizeMode="contain"
+              style={styles.leftArrow}
+            />
+          </TouchableOpacity>
+        </View>
+      )}
+
       <View style={styles.midContainer}>
-        <Text style={styles.midTitle}>MID TITLE</Text>
+        <Text style={styles.midTitle}>{title}</Text>
       </View>
-      <View style={styles.rightContainer}>
-        {/* <Image 
-        
-        /> */}
-      </View>
+      {hasRightIcon && (
+        <View style={styles.rightContainer}>
+          <TouchableOpacity onPress={onPress}>
+            <Image
+              source={hasRightIcon}
+              resizeMode="contain"
+              style={styles.leftArrow}
+            />
+          </TouchableOpacity>
+        </View>
+      )}
     </View>
   );
 };

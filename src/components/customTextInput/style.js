@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   mainContainer: {
     // flex: 1,
-    height: 'auto',
+    height: 150,
     backgroundColor: 'rgba(255, 255, 255, 0.05)',
     padding: 15,
     borderRadius: 10,
@@ -11,10 +11,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginHorizontal: 10,
     marginTop: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
   },
-  textTitle: {
+  textInputStyle: {
     color: '#FFFFFF',
   },
 });
